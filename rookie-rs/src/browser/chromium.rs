@@ -96,7 +96,7 @@ fn get_keys(key64: &str) -> Result<Vec<Vec<u8>>> {
   Ok(keys)
 }
 
-#[cfg(target_os = "linux")]
+#[cfg(any(target_os = "linux", target_os = "freebsd"))]
 fn get_keys(config: &Browser) -> Result<Vec<Vec<u8>>> {
   // AES CBC key
 
