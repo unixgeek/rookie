@@ -20,7 +20,7 @@ use config::get_browser_config;
 use enums::Cookie;
 use eyre::bail;
 pub use eyre::Result;
-#[cfg(target_os = "linux")]
+#[cfg(any(target_os = "linux", target_os = "freebsd"))]
 mod linux;
 #[cfg(target_os = "windows")]
 use std::path::PathBuf;
