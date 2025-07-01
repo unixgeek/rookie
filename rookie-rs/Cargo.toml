@@ -45,7 +45,7 @@ appbound = []
 pbkdf2 = "0.12"
 sha1 = "0.10"
 
-[target.'cfg(target_os = "linux")'.dependencies]
+[target.'cfg(any(target_os = "linux", target_os = "freebsd"))'.dependencies]
 zbus = "3"
 zvariant = "3"
 
